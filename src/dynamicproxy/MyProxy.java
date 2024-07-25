@@ -1,4 +1,4 @@
-package proxy;
+package dynamicproxy;
 
 import java.util.ArrayList;
 import java.util.List;

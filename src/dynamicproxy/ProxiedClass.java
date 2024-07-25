@@ -1,4 +1,4 @@
-package proxy;
+package dynamicproxy;
 
 /**
  * 被代理类

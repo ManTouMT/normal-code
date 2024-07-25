@@ -1,4 +1,4 @@
-package proxy;
+package dynamicproxy;
 
 public interface ProxiedInterface {
     Long doSomething();
