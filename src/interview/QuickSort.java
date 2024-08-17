@@ -19,17 +19,18 @@ public class QuickSort {
     }
 
     private int partition(int[] arr, int left, int right) {
-        int firstMaxValue = left + 1;
+        // firstMaxValueIdx定位比arr[left] 大的第一个元素的下标  如：7 3 9 8 2 1  定位到9之后和2做交换，再下次是8和1做交换 
+        int firstMaxValueIdx = left + 1; //8 9 2 9 2
         for(int i = left + 1; i <= right; i++) {
             if(arr[i] < arr[left]) {
-                if(i != firstMaxValue) {
-                    swap(arr, i, firstMaxValue);
+                if(i != firstMaxValueIdx) {
+                    swap(arr, i, firstMaxValueIdx);
                 }
-                firstMaxValue++;
+                firstMaxValueIdx++;
             }
         }
-        swap(arr, left, firstMaxValue - 1);
-        return firstMaxValue - 1;
+        swap(arr, left, firstMaxValueIdx - 1);
+        return firstMaxValueIdx - 1;
     }
 
     private void swap(int[] arr, int i, int j) {
